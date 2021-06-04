@@ -1,0 +1,14 @@
+[
+    {
+    "id": "2",
+    "icon": "images/svg/linea/linea-basic-message-txt.svg",
+    "title": "Give us a call",
+    "info": "(+1) 6155786504"
+    },
+    {
+    "id": "3",
+    "icon": "images/svg/linea/linea-basic-mail-open-text.svg",
+    "title": "Help Desk",
+    "info": "info@comercialogistics.com"
+    }
+]

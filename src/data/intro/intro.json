@@ -1,0 +1,16 @@
+[
+    {
+        "id": "1",
+     
+        "title": "A professionally managed distribution company",
+        "desc": "Focus on your business, we are your logistics expert and your most reliable business partner.",
+        "backgroundImage": "/images/hero-image/fondo3.jpg"
+    },
+    {
+        "id": "2",
+        "title": "One partner, a world of solutions",
+        "desc": "Our services comes with many benefits designed to improve the supply chain activities of our clients.",
+        "backgroundImage": "/images/hero-image/fondo22.jpg"
+    }
+
+]
