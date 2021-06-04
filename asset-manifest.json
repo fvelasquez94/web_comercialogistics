@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/web_comercialogistics/static/css/main.03b2028a.chunk.css",
+    "main.js": "/web_comercialogistics/static/js/main.32f1a531.chunk.js",
+    "main.js.map": "/web_comercialogistics/static/js/main.32f1a531.chunk.js.map",
+    "runtime-main.js": "/web_comercialogistics/static/js/runtime-main.4365c5d7.js",
+    "runtime-main.js.map": "/web_comercialogistics/static/js/runtime-main.4365c5d7.js.map",
+    "static/css/2.cdabc4ba.chunk.css": "/web_comercialogistics/static/css/2.cdabc4ba.chunk.css",
+    "static/js/2.c28c6034.chunk.js": "/web_comercialogistics/static/js/2.c28c6034.chunk.js",
+    "static/js/2.c28c6034.chunk.js.map": "/web_comercialogistics/static/js/2.c28c6034.chunk.js.map",
+    "index.html": "/web_comercialogistics/index.html",
+    "static/css/2.cdabc4ba.chunk.css.map": "/web_comercialogistics/static/css/2.cdabc4ba.chunk.css.map",
+    "static/css/main.03b2028a.chunk.css.map": "/web_comercialogistics/static/css/main.03b2028a.chunk.css.map",
+    "static/js/2.c28c6034.chunk.js.LICENSE.txt": "/web_comercialogistics/static/js/2.c28c6034.chunk.js.LICENSE.txt",
+    "static/media/style.scss": "/web_comercialogistics/static/media/pe-icon-7-stroke.7233a7ae.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4365c5d7.js",
+    "static/css/2.cdabc4ba.chunk.css",
+    "static/js/2.c28c6034.chunk.js",
+    "static/css/main.03b2028a.chunk.css",
+    "static/js/main.32f1a531.chunk.js"
+  ]
+}
