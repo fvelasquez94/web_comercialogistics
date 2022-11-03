@@ -1,10 +1,10 @@
 import React from "react";
-
+import { useTranslation } from 'react-i18next'
 
 
 
 const HomeSkillWithVideo = () => {
-
+    const { t } = useTranslation()
     return (
         <div className="video-section section section-padding" >
 
@@ -17,8 +17,8 @@ const HomeSkillWithVideo = () => {
                         <div className="skill-with-video-content">
                             <div className="section-title-two mb-8">
                             <img className="image photomap" width="50" src={process.env.PUBLIC_URL + "/images/limena/gpspin.png"} alt="gps pin"  />
-                                <span className="sub-title">Distribution Centers</span>
-                                <h3 className="title">Third Party Fleet National Coverage</h3>
+                                <span className="sub-title">{t('coveragesectiontitle')}</span>
+                                <h3 className="title">{t('coveragesectionsubtitle')}</h3>
                             </div>
 
                             <ul className="agency-list">

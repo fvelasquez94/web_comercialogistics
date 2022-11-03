@@ -27,10 +27,11 @@ const NavBar = () => {
                     <a href="#services"><span className="menu-text">{t('ourserviceslabel')}</span></a>
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/work"}><span className="menu-text">{t('workwithuslabel')}</span></NavLink>
+                    <a href="#workwithus"><span className="menu-text">{t('workwithuslabel')}</span></a>
                 </li>
                 <li>
-                    <NavLink to={process.env.PUBLIC_URL + "/contact"}><span className="menu-text">{t('contactuslabel')}</span></NavLink>
+
+                    <a href="#contactus"><span className="menu-text">{t('contactuslabel')}</span></a>
                 </li>
             </ul>
         </nav>

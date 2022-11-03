@@ -15,23 +15,27 @@ import ScrollToTop from '../components/ScrollToTop.jsx';
 
 
 const HomeOne = () => {
+
+
     return (
-        <Suspense fallback={null}>
-        <React.Fragment>
-            <SEO title="Comercia Logistics - Distribution Across the Country" />
+   
+        <React.Fragment>  
+       
+            <SEO title="Comercia Logistics - Distribution Across the Country" />   
+             <Suspense fallback={null}>
             <Header />
-           
-            <IntroSlider />   
+          
+            <IntroSlider />
             <HomeAbout />
             <ServiceIconBox classOption="bg-color-1" />
 
             <HomeSkillWithVideo />
             <Newsletter />
-            <ContactInformationTwo />
-            <Footer />
-            <ScrollToTop />
+            <ContactInformationTwo />  
+            <Footer /> 
+            <ScrollToTop /></Suspense>
         </React.Fragment>
-        </Suspense>
+     
     )
 }
 

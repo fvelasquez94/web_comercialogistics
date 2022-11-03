@@ -28,7 +28,7 @@
         "icon": "images/svg/linea/linea-ecommerce-cart-plus.svg",
         "title": "Ecommerce",
         "desc": "Our web design services can help rediscover your business’ image in the internet marketplace.",
-        "pageLink": "Learn More",
+        "pageLink": "",
         "link": "service"
     },
     {
@@ -36,7 +36,7 @@
         "icon": "images/svg/linea/linea-basic-gear.svg",
         "title": "Development",
         "desc": "Our web design services can help rediscover your business’ image in the internet marketplace.",
-        "pageLink": "Learn More",
+        "pageLink": "",
         "link": "service"
     },
     {

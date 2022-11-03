@@ -2,10 +2,11 @@ import {useEffect, useRef} from "react";
 import SectionTitle from '../../components/SectionTitles/SectionTitle';
 
 import Parallax from 'parallax-js';
-import {Link} from "react-router-dom";
 
+import { useTranslation } from 'react-i18next'
 const Newsletter = () => {
     const sceneEl = useRef(null);
+    const { t } = useTranslation()
     useEffect(() => {
         const parallaxInstance = new Parallax(sceneEl.current, {
         relativeInput: true,
@@ -17,18 +18,18 @@ const Newsletter = () => {
 
     }, [])
     return (
-        <div className="section section-bg-image section-padding-t110-b120 newsletter-section overlay-two" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/limena/jobland.jpg)`}}>
+        <div id="workwithus" className="section section-bg-image section-padding-t110-b120 newsletter-section overlay-two" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/limena/jobland.jpg)`}}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-12">
                         <div className="newsletter-content">
                             <SectionTitle
                                 titleOption="color-light text-center"
-                                title="Work with us"
-                                subTitle="We are looking for people to join our team, and be part of a growing logistics company in the USA southeast area. We are Comercia Logistics!"
+                                title={t('worksectiontitle')}
+                                subTitle={t('worksectionsubtitle')}
                             />
                                   <div className="col-12 text-center mb-4">
-                                                        <Link to={process.env.PUBLIC_URL + "/"} className="btn btn-primary btn-hover-secondary">Apply Today</Link>
+                                                        <a href="https://apply.comercialogistics.com/" className="btn btn-primary btn-hover-secondary">{t('worksectionbutton')}</a>
                         </div>    </div>
                     </div>
                 </div>

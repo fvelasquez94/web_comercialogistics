@@ -1,26 +1,28 @@
-import {Fragment, useState, useEffect} from "react";
+import {Fragment, useState, useEffect, Suspense} from "react";
 import Logo from '../../components/logo/Logo';
 import NavBar from '../../components/NavBar/NavBar';
 //import HeaderSearch from '../../components/HeaderSearch/HeaderSearch';
 
-import MobileMenu from "../../components/NavBar/MobileMenu"
-import MainSearch from "../../components/NavBar/MainSearch"
+ import MobileMenu from "../../components/NavBar/MobileMenu"
+// import MainSearch from "../../components/NavBar/MainSearch"
 import LanguageSelector from '../../components/i18n/LanguageSelector'
 
 
 const Header = () => {
   
 
-
-
-    const [ofcanvasShow, setOffcanvasShow] = useState(false);
+ const [ofcanvasShow, setOffcanvasShow] = useState(false);
+  
+    // const [searchbarShow, setSearchbarShow] = useState(false);
+    // const onSearchHandler = () => {
+    //     setSearchbarShow(prev => !prev);
+    // }
+   
     const onCanvasHandler = () => {
         setOffcanvasShow(prev => !prev);
     }
-    const [searchbarShow, setSearchbarShow] = useState(false);
-    const onSearchHandler = () => {
-        setSearchbarShow(prev => !prev);
-    }
+   
+
     const [scroll, setScroll] = useState(0);
     const [headerTop, setHeaderTop] = useState(0);
 
@@ -37,6 +39,7 @@ const Header = () => {
         setScroll(window.scrollY);
     };
     return (
+        <Suspense fallback={<h1>Loading/ Cargando...</h1>}>
         <Fragment>
             <div className={`header-section header-transparent sticky-header section ${
         scroll > headerTop ? "is-sticky" : ""
@@ -55,16 +58,16 @@ const Header = () => {
                                 </div>
                         
 
-                                <div className="header-mobile-menu-toggle d-xl-none ml-sm-2">
+                                {/* <div className="header-mobile-menu-toggle d-xl-none ml-sm-2">
                                     <button type="button" className="toggle" onClick={onCanvasHandler}>
                                         <i className="icon-top"></i>
                                         <i className="icon-middle"></i>
                                         <i className="icon-bottom"></i>
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
 
-                            <div className="col-xl-2 col d-none d-sm-flex justify-content-end order-1 order-xl-2">
+                            <div className="col-xl-2 col d-flex d-sm-flex justify-content-end order-1 order-xl-2">
                              
                                 <LanguageSelector />
                             </div>
@@ -72,9 +75,10 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <MobileMenu show={ofcanvasShow} onClose={onCanvasHandler}/>
-            <MainSearch show={searchbarShow} onClose={onSearchHandler}/>
+            <MobileMenu show={ofcanvasShow} onClose={onCanvasHandler}/> 
+            {/* <MainSearch show={searchbarShow} onClose={onSearchHandler}/> */}
         </Fragment>
+        </Suspense>
     )
 }
 

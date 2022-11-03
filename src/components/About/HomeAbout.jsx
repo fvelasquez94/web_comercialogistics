@@ -3,12 +3,12 @@ import SectionTitle from '../SectionTitles/SectionTitle';
 import SectionTitleTwo from '../SectionTitles/SectionTitleTwo';
 import Tilt from 'react-parallax-tilt';
 import Parallax from 'parallax-js';
-
+import { useTranslation } from 'react-i18next'
 
 const HomeAbout = () => {
     const [scale] = useState(1.04);
     const sceneEl = useRef(null);
-
+    const { t } = useTranslation()
     useEffect(() => {
         const parallaxInstance = new Parallax(sceneEl.current, {
         relativeInput: true,
@@ -24,10 +24,8 @@ const HomeAbout = () => {
             <div className="container">
 
                 <SectionTitle
-                    title="We are a full-service logistics company"
-                    subTitle="We are committed to give our customers
-                    fast response to their necessities in
-                    supply chain with high quality service"
+                    title={t('aboutsectiontitle')}
+                    subTitle={t('aboutsectionsubtitle')}
                 />
 
                 <div className="row">
@@ -56,11 +54,11 @@ const HomeAbout = () => {
                     <div className="col-xl-5 col-lg-6 col-12" data-aos="fade-up" data-aos-delay="300">
                         <div className="about-content-area">
                             <SectionTitleTwo 
-                                subTitle="Every day brings new challenges"
-                                title="We create solutions for your company"
+                                subTitle={t('aboutsectiontwotitle')}
+                                title={t('aboutsectiontwosubtitle')}
                             />
 
-                            <p>Our goal as a company is to provide logistics services with the highest standards to exceed the expectations of our customers in the most demanding market, with a high qualified staff to ensure our value as a brand.</p>
+                            <p>{t('aboutsectiontwodesc')}</p>
 
                         </div>
                     </div>

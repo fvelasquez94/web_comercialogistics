@@ -4,7 +4,7 @@ import ReactFlagsSelect from 'react-flags-select';
 
 const LanguageSelector = () => {
   const { i18n } = useTranslation()
-  const [selected, setSelected] = useState('US');
+  const [selected, setSelected] = useState(localStorage. getItem("defaultlangflag") || 'US');
   
 
 
@@ -12,7 +12,19 @@ const LanguageSelector = () => {
  const onSelectFlag = (countryCode) => {
    
      setSelected(countryCode);
-    if(countryCode=="US"){i18n.changeLanguage("EN")}else{i18n.changeLanguage(countryCode)}
+    if(countryCode=="US"){
+      i18n.changeLanguage("en");
+      // setter
+      localStorage.setItem('defaultlang', "en");
+      //solo aplica para US
+      localStorage.setItem('defaultlangflag', "US");
+  
+  }else{
+    i18n.changeLanguage(countryCode);
+    localStorage.setItem('defaultlang', countryCode);
+
+     localStorage.setItem('defaultlangflag', countryCode);
+  }
 
      
  }

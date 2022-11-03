@@ -3,25 +3,28 @@ import React from 'react';
 import IconBoxData from '../../data/iconBox/icon-box.json';
 import IconBox from '../../components/IconBox/IconBox.jsx';
 import SectionTitle from '../../components/SectionTitles/SectionTitle';
-
+import { useTranslation } from 'react-i18next'
 const ServiceIconBox = ({ classOption }) => {
+    const { t } = useTranslation()
     return (
         <div  id="services" className={`section section-padding-t90-b100 ${classOption}`}>
             <div className="container" >
 
                 <SectionTitle
-                    title="Our services"
-                    subTitle="Get your company heading in the right direction with our different services"
+                    title={t('servicessectiontitle')}
+                    subTitle={t('servicessectionsubtitle')}
                 />
 
                 <div className="row row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1 mb-n6">
 
                     {IconBoxData && IconBoxData.slice(0, 3).map((single, key) => {
-                            return(
-                                <div key={key} className="col mb-6" data-aos="fade-up">
-                                    <IconBox classOption="box-border" data={single} key={key} />
-                                </div>
-                            ); 
+                                            
+                                                    return (
+                                                        <div key={key} className="col mb-6" data-aos="fade-up">
+                                                        <IconBox classOption="box-border" data={single} key={key} />
+                                                    </div>
+                                                    )
+                                                    
                     })}
 
                 </div>

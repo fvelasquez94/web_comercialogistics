@@ -1,5 +1,5 @@
 {
-  "homepage": "https://fvelasquez94.github.io/web_comercialogistics",
+  "homepage": "https://comercialogistics.com/",
   "name": "comercialogisticslp",
   "version": "1.0.0",
   "private": true,
@@ -10,6 +10,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^4.5.3",
     "disqus-react": "^1.0.11",
+    "emailjs-com": "^2.6.4",
     "i18next": "^20.3.1",
     "i18next-xhr-backend": "^3.2.2",
     "imagesloaded": "^4.1.4",
@@ -45,9 +46,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .gitignore . --ext js --ext jsx",
-    "lint:fix": "npm run lint --fix",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "lint:fix": "npm run lint --fix"
   },
   "eslintConfig": {
     "extends": [

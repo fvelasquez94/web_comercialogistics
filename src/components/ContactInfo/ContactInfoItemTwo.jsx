@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactVivus from 'react-vivus';
 
+import { useTranslation } from 'react-i18next'
 const ContactInfoItemTwo = ({ data, classOption }) => {
+    const { t } = useTranslation()
     return (
         <div className={`contact-info ${classOption}`} >
             <div className="icon">
@@ -16,10 +18,25 @@ const ContactInfoItemTwo = ({ data, classOption }) => {
                     }}
                 />
             </div>
-            <div className="info">
-                <h4 className="title">{data.title}</h4>
-                <span className="info-text" dangerouslySetInnerHTML={{__html: data.info}} />
-            </div>
+            {(() => {
+                                                    if (data.id=="1") {
+                                                    return (
+                                                        <div className="info">
+                                                        <h4 className="title">{t('contactsectioncall')}</h4>
+                                                        <span className="info-text" dangerouslySetInnerHTML={{__html: data.info}} />
+                                                    </div>
+                                                    )
+                                                    }  
+                                                    else {
+                                                    return (
+                                                        <div className="info">
+                                                        <h4 className="title">{t('contactsectionemail')}</h4>
+                                                        <span className="info-text" dangerouslySetInnerHTML={{__html: data.info}} />
+                                                    </div>
+                                                    )
+                                                    }
+                                                })()}
+    
         </div>
     )
 }
