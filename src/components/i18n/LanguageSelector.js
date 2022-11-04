@@ -21,7 +21,7 @@ const LanguageSelector = () => {
   
   }else{
     i18n.changeLanguage(countryCode);
-    localStorage.setItem('defaultlang', countryCode);
+    localStorage.setItem('defaultlang', "es");
 
      localStorage.setItem('defaultlangflag', countryCode);
   }
