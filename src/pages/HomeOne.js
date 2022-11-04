@@ -21,7 +21,7 @@ const HomeOne = () => {
    
         <React.Fragment>  
        
-            <SEO title="Comercia Logistics - Distribution Across the Country" />   
+            <SEO title="Comercia Logistics - Distribution Across the Country." />   
              <Suspense fallback={null}>
             <Header />
           
