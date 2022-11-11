@@ -18,7 +18,7 @@ const Newsletter = () => {
 
     }, [])
     return (
-        <div id="workwithus" className="section section-bg-image section-padding-t110-b120 newsletter-section overlay-two" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/images/limena/jobland.jpg)`}}>
+        <div id="workwithus" className="section section-bg-image newsletter-section overlay-two" style={{paddingTop:100, paddingBottom:100,backgroundImage: `url(${process.env.PUBLIC_URL}/images/limena/jobland.jpg)`}}>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-12">
@@ -28,9 +28,16 @@ const Newsletter = () => {
                                 title={t('worksectiontitle')}
                                 subTitle={t('worksectionsubtitle')}
                             />
-                                  <div className="col-12 text-center mb-4">
+                            <div id="iframeHeightDiv" align="center">
+
+<iframe id="inlineframe" title="Career Site" src="https://ethnixgroup.hrmdirect.com/employment/job-openings.php?search=true&amp;dept=-1&amp;city=-1&amp;state=-1" name="HRM Direct Career Site iFrame" sandbox="allow-top-navigation allow-scripts allow-forms allow-popups allow-same-origin">&nbsp;
+
+</iframe>
+
+</div>
+                                  {/* <div className="col-12 text-center mb-4">
                                                         <a href="https://apply.comercialogistics.com/" className="btn btn-primary btn-hover-secondary">{t('worksectionbutton')}</a>
-                        </div>    </div>
+                        </div>  */}  </div> 
                     </div>
                 </div>
             </div>

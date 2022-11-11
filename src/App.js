@@ -37,6 +37,8 @@ function App() {
       <Router>
         <NavScrollTop>
             <Switch>
+              <Route path={`${process.env.PUBLIC_URL + "/index.html"}`} exact component={HomeOne}/>
+              <Route path={`${process.env.PUBLIC_URL + "/index"}`} exact component={HomeOne}/>
               <Route path={`${process.env.PUBLIC_URL + "/"}`} exact component={HomeOne}/>
               <Route path={`${process.env.PUBLIC_URL + "/home-one"}`} exact component={HomeOne}/>
               <Route path={`${process.env.PUBLIC_URL + "/home-two"}`} component={HomeTwo}/>
