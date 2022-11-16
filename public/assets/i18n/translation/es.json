@@ -35,5 +35,18 @@
     "contactformsectionemail":"Correo electrónico *",
     "contactformsectionmesage":"Mensaje",
     "contactformsectionbutton":"Enviar",
-    "contactformsectionresponse":"Su mensaje ha sido enviado con éxito! "
+    "contactformsectionresponse":"Su mensaje ha sido enviado con éxito!",
+    "behaviorstitle": "Comportamientos",
+    "valuestitle": "Valores",
+    "values1": "• Creatividad",
+    "values2": "• Flexibilidad",
+    "values3": "• Compromiso",
+    "values4": "• Puntualidad",
+    "values5": "• Perseverancia",
+    "values6": "• Honestidad",
+    "behaviors1": "• Las metas de nuestros clientes son las nuestras",
+    "behaviors2": "• Si lo ofrecemos, lo cumplimos",
+    "behaviors3": "• Completo a tiempo y correcto",
+    "behaviors4": "• Enfocados a que las cosas sucedan",
+    "behaviors5": "• Aprendemos, aplicamos y evolucionamos"
   }

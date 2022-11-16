@@ -35,5 +35,20 @@
     "contactformsectionemail":"Email *",
     "contactformsectionmesage":"Message",
     "contactformsectionbutton":"Get a free consultation",
-    "contactformsectionresponse":"Your message was successfully sent!"
+    "contactformsectionresponse":"Your message was successfully sent!",
+    "behaviorstitle": "Behaviors",
+    "valuestitle": "Values",
+    "values1": "• Creativity",
+    "values2": "• Flexibility",
+    "values3": "• Commitment",
+    "values4": "• Punctuality",
+    "values5": "• Perseverance",
+    "values6": "• Honesty",
+    "behaviors1": "• Our clients' goals are our goals",
+    "behaviors2": "• If we promise it, we deliver it",
+    "behaviors3": "• Completed on time and accurate",
+    "behaviors4": "• We are focused on making things happen",
+    "behaviors5": "• We learn, implement and evolve"
+
+
   }

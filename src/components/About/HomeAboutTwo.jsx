@@ -1,93 +1,77 @@
-import {useState, useEffect, useRef} from "react";
+//import {useState} from "react";
 import SectionTitleTwo from '../SectionTitles/SectionTitleTwo';
-import Tilt from 'react-parallax-tilt';
-import Parallax from 'parallax-js';
-import CountUp from 'react-countup';
-import VisibilitySensor from "react-visibility-sensor";
-
+//import Tilt from 'react-parallax-tilt';
+//import Parallax from 'parallax-js';
+//import CountUp from 'react-countup';
+//import VisibilitySensor from "react-visibility-sensor";
+import { useTranslation } from 'react-i18next'
 const HomeAboutTwo = () => {
-    const [didViewCountUp, setDidViewCountUp] = useState(false);
+    //const [didViewCountUp, setDidViewCountUp] = useState(false);
+    const { t } = useTranslation()
+    // const onVisibilityChange = isVisible => {
+    //     if (isVisible) {
+    //     setDidViewCountUp(true);
+    //     }
+    // };
+    //const [scale] = useState(1.04);
 
-    const onVisibilityChange = isVisible => {
-        if (isVisible) {
-        setDidViewCountUp(true);
-        }
-    };
-    const [scale] = useState(1.04);
-    const sceneEl = useRef(null);
-    useEffect(() => {
-        const parallaxInstance = new Parallax(sceneEl.current, {
-        relativeInput: true,
-        })
-        
-        parallaxInstance.enable();
-
-        return () => parallaxInstance.disable();
-
-    }, [])
     return (
-        <div className="section section-padding-top section-padding-bottom-150">
+        <div className="section section-padding-top">
             <div className="container">
 
                 <div className="row">
 
-                    <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up">
-                        <div className="about-content-area mt-0 mb-md-10 mb-10">
+                    <div className="col-xl-5 col-lg-5 col-12" >
+                        <div className="about-content-area ">
                             <SectionTitleTwo 
-                                subTitle="Web design and digital marketing"
-                                title="We think strategy, UX design, <br /> and web development"
+                              title={t('worksectiontitle')}
+                              subTitle={t('worksectionsubtitle')}
                             />
 
                             <div className="row mb-n6">
-                                <div className="col-md-5 col-sm-6 col-12 mb-6">
+                                <div className="col-md-7 col-sm-6 col-12 mb-6">
                                     <div className="about-funfact">
                                         <div className="number">
-                                            <VisibilitySensor
-                                                onChange={onVisibilityChange}
-                                                offset={{ top: 10 }}
-                                                delayedCall
-                                                >
-                                                <CountUp end={didViewCountUp ? 130 : 0} />
-                                            </VisibilitySensor>+
+                                      
+                                         <img className="image"  src={process.env.PUBLIC_URL + "/images/limena/behaviorscl.png"} style={{width:80}} alt="Behaviors" />
                                         </div>
-                                        <h6 className="text">Happy Clients</h6>
-                                        <p>We help our clients increase profits by increasing their visibility online.</p>
-                                    </div>
+                                        <h6 className="text">{t('behaviorstitle')}</h6>
+                                        <p className="text-dark">{t('behaviors1')}</p>
+                                        <p className="text-dark">{t('behaviors2')}</p>
+                                        <p className="text-dark">{t('behaviors3')}</p>
+                                        <p className="text-dark">{t('behaviors4')}</p>
+                                        <p className="text-dark">{t('behaviors5')}</p>
+                                                                           </div>
                                 </div>
                                 <div className="col-md-5 col-sm-6 col-12 mb-6">
                                     <div className="about-funfact">
                                         <div className="number">
-                                            <VisibilitySensor
-                                                onChange={onVisibilityChange}
-                                                offset={{ top: 10 }}
-                                                delayedCall
-                                                >
-                                                <CountUp end={didViewCountUp ? 110 : 0} />
-                                            </VisibilitySensor>+
+                                        <img className="image"  src={process.env.PUBLIC_URL + "/images/limena/valuescl.png"} style={{width:80}} alt="Values" />
+
                                         </div>
-                                        <h6 className="text">Completed projects</h6>
-                                        <p>We help our clients increase profits by increasing their visibility online.</p>
+                                        <h6 className="text">{t('valuestitle')}</h6>
+                                        <p className="text-dark">{t('values1')}</p>
+                                        <p className="text-dark">{t('values2')}</p>
+                                        <p className="text-dark">{t('values3')}</p>
+                                        <p className="text-dark">{t('values4')}</p>
+                                        <p className="text-dark">{t('values5')}</p>
+                                        <p className="text-dark">{t('values6')}</p>
+                                      
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up" data-aos-delay="300">
+                    <div className="col-xl-7 col-lg-7 col-12">
                         <div className="about-image-area about-shape-animation right-0 mr-0">
-                            <div className="about-image js-tilt">
-                                <Tilt scale={scale} transitionSpeed={4000}>
-                                    <img src={process.env.PUBLIC_URL + "images/about/about-1.jpg"} alt="" />
-                                </Tilt>
-                            </div>
-                            <div className="about-image js-tilt">
-                                <Tilt scale={scale} transitionSpeed={4000}>
-                                    <img src={process.env.PUBLIC_URL + "images/about/about-2.jpg"} alt="" />
-                                </Tilt>
-                            </div>
-                            <div className="shape shape-1" id="scene" ref={sceneEl}>
-                                <span data-depth="1"><img src={process.env.PUBLIC_URL + "images/shape-animation/video-shape-1.png"} alt="" /></span>
-                            </div>
+                        <div id="iframeHeightDiv" align="center">
+
+<iframe id="inlineframe" title="Career Site" src="https://ethnixgroup.hrmdirect.com/employment/job-openings.php?search=true&amp;dept=-1&amp;city=-1&amp;state=-1" name="HRM Direct Career Site iFrame" sandbox="allow-top-navigation allow-scripts allow-forms allow-popups allow-same-origin">&nbsp;
+
+</iframe>
+
+</div>
                         </div>
                     </div>
 

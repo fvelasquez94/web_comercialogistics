@@ -7,11 +7,11 @@ import HomeAbout from '../components/About/HomeAbout.jsx';
 import ServiceIconBox from '../container/service/ServiceIconBox';
 import '../i18n'
 import HomeSkillWithVideo from '../container/HomeSkillWithVideo/HomeSkillWithVideo';
-import Newsletter from '../container/Newsletter/Newsletter';
+//import Newsletter from '../container/Newsletter/Newsletter';
 import ContactInformationTwo from '../container/ContactInformation/ContactInformationTwo';
 import Footer from '../container/Footer/Footer';
 import ScrollToTop from '../components/ScrollToTop.jsx';
-
+import HomeAboutTwo from '../components/About/HomeAboutTwo';
 
 
 const HomeOne = () => {
@@ -28,9 +28,10 @@ const HomeOne = () => {
             <IntroSlider />
             <HomeAbout />
             <ServiceIconBox classOption="bg-color-1" />
-
+            <HomeAboutTwo />
             <HomeSkillWithVideo />
-            <Newsletter />
+         
+            {/* <Newsletter /> */}
             <ContactInformationTwo />  
             <Footer /> 
             <ScrollToTop /></Suspense>

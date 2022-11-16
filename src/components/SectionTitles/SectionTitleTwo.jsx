@@ -5,8 +5,9 @@ import React from 'react';
 const SectionTitleTwo = ({subTitle , title, classOption}) => {
     return (
         <div className={`section-title-two ${classOption}`} data-aos="fade-up">
-            <span className="sub-title">{subTitle}</span>
-            <h3 className="title" dangerouslySetInnerHTML={{__html: title}} />
+                        <h1 className="" dangerouslySetInnerHTML={{__html: title}} />
+
+            <span className="text-dark">{subTitle}</span>
         </div>
     )
 }
